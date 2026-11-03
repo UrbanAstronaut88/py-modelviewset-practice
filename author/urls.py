@@ -5,8 +5,8 @@ from .views import AuthorViewSet
 app_name = "author"
 
 router = SimpleRouter()
-router.register(r'authors', AuthorViewSet, basename='manage')
+router.register(r"authors", AuthorViewSet, basename="manage")
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path("", include(router.urls)),
 ]
