@@ -1,13 +1,12 @@
 from django.urls import path, include
 from rest_framework.routers import SimpleRouter
-from author.views import AuthorViewSet
-
+from .views import AuthorViewSet
 
 app_name = "author"
-router = SimpleRouter()
-router.register(r"authors", AuthorViewSet, basename="author")
 
+router = SimpleRouter()
+router.register(r'authors', AuthorViewSet, basename='manage')
 
 urlpatterns = [
-    path("", include(router.urls)),
+    path('', include(router.urls)),
 ]
